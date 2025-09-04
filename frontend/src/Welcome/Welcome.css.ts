@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css";
-import { vars } from "../theme";
-import { rem } from "@mantine/core";
+import { style } from '@vanilla-extract/css';
+import { rem } from '@mantine/core';
+import { vars } from '../theme';
 
 export const title = style({
   color: vars.colors.black,
@@ -14,8 +14,8 @@ export const title = style({
     },
   },
 
-  "@media": {
-    [vars.smallerThan("md")]: {
+  '@media': {
+    [vars.smallerThan('md')]: {
       fontSize: rem(50),
     },
   },
