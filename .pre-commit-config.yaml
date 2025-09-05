@@ -1,0 +1,41 @@
+repos:
+  # todo add once uv & black setup
+  # --- Backend: Black via local install ---
+#  - repo: local
+#    hooks:
+#      - id: black-backend
+#        name: black (backend/)
+#        entry: black
+#        language: system
+#        types: [python]
+#        files: ^backend/
+
+  # --- Frontend: typecheck via yarn ---
+  - repo: local
+    hooks:
+      - id: typecheck-frontend
+        name: typecheck (frontend/)
+        entry: corepack yarn --cwd frontend run typecheck
+        language: system
+        files: ^frontend/
+        pass_filenames: false
+
+  # --- Frontend: ESLint via yarn ---
+  - repo: local
+    hooks:
+      - id: eslint-frontend
+        name: eslint (frontend/)
+        entry: corepack yarn --cwd frontend run eslint
+        language: system
+        files: ^frontend/
+        pass_filenames: false
+
+  # --- Frontend: Prettier via yarn ---
+  - repo: local
+    hooks:
+      - id: prettier-frontend
+        name: prettier (frontend/)
+        entry: corepack yarn --cwd frontend run prettier
+        language: system
+        files: ^frontend/
+        pass_filenames: false
