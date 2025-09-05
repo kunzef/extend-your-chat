@@ -1,14 +1,14 @@
 repos:
   # todo add once uv & black setup
   # --- Backend: Black via local install ---
-#  - repo: local
-#    hooks:
-#      - id: black-backend
-#        name: black (backend/)
-#        entry: black
-#        language: system
-#        types: [python]
-#        files: ^backend/
+  - repo: local
+    hooks:
+      - id: black-backend
+        name: black (backend/)
+        entry: black
+        language: system
+        types: [python]
+        files: ^backend/
 
   # --- Frontend: typecheck via yarn ---
   - repo: local
